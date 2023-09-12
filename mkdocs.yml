@@ -1,43 +1,41 @@
 site_name: Flow API
   
 nav:
-  - "Оглавление": "index.md"
-  - "Документация API":
-      - "Обзор": "api/index.md"
-      - "Аккаунт": 
-          - "Обзор": "api/account/index.md"
-          - "Получить настройки аккаунта (инстанса)": "api/account/get-settings.md"
-          - "Установить настройки аккаунта (инстанса)": "api/account/set-settings.md"
-          - "Перезапустить аккаунт (инстанс)": "api/account/reboot.md"
-          - "Получить QR-код": "api/account/qr.md"
-      - "Отправка":
-          - "Обзор": "api/sending/index.md"
-          - "Отправить текст": "api/sending/text.md"
-          - "Отправить изображение": "api/sending/image.md"
-      - "Получение":
-          - "Обзор": "api/receiving/index.md"
-          - "Формат входящих уведомлений":
-              - "Обзор": "api/receiving/notifications-format/index.md"
-              - "Входящее сообщение":
-                  - "Обзор": "api/receiving/notifications-format/incoming-message/index.md"
-                  - "Текст": "api/receiving/notifications-format/incoming-message/text.md"
-                  - "Текст или текст с URL": "api/receiving/notifications-format/incoming-message/extended-text.md"
-                  - "Видео, аудио, изображение, документ": "api/receiving/notifications-format/incoming-message/image.md"
-                  - "Реакция": "api/receiving/notifications-format/incoming-message/reaction.md"
-              - "Отправленное сообщение":
-                  - "Обзор": "api/receiving/notifications-format/outgoing-message/index.md"
-                  - "Отправленное с телефона сообщение": "api/receiving/notifications-format/outgoing-message/phone.md"
-                  - "Отправленное сообщение через API": "api/receiving/notifications-format/outgoing-message/api.md"
-                  - "Статус отправленного сообщения": "api/receiving/notifications-format/outgoing-message/status.md"
-      - "Сервисные методы":
-          - "Обзор": "api/service/index.md"
-          - "Проверить наличие Whatsapp": "api/service/check-whatsapp.md"
-      - "Ограничение частоты запросов": "api/rate-limiter.md"
-  - "Партнерам":
-      - "Обзор": "partners/index.md"
-      - "Создание инстанса": "partners/instance-creation.md"
-      - "Удаление инстанса аккаунта партнера": "partners/instance-remover.md"
-      - "Получение всех инстансов аккаунта созданных партнером": "partners/instance-receiver.md"
+  - "Index": "index.md"
+  - "API documents":
+      - "Overview": "api/index.md"
+      - "Account":
+          - "Account - overview": "api/account/index.md"
+          - "Get account settings (instance)": "api/account/get-settings.md"
+          - "Set account settings (instance)": "api/account/set-settings.md"
+          - "Reboot account (instance)": "api/account/reboot.md"
+          - "Get QR code": "api/account/qr.md"
+      - "Sending":
+          - "Sending - overview": "api/sending/index.md"
+          - "Send text": "api/sending/text.md"
+          - "Send image via URL": "api/sending/image.md"
+      - "Receiving":
+          - "Receiving - overview": "api/receiving/index.md"
+          - "Incoming notification format":
+              - "Overview": "api/receiving/notifications-format/index.md"
+              - "Incoming messages":
+                  - "Overview": "api/receiving/notifications-format/incoming-message/index.md"
+                  - "Text": "api/receiving/notifications-format/incoming-message/text.md"
+                  - "Text or text with URL": "api/receiving/notifications-format/incoming-message/extended-text.md"
+                  - "Image": "api/receiving/notifications-format/incoming-message/image.md"
+              - "Outgoing messages":
+                  - "Overview": "api/receiving/notifications-format/outgoing-message/index.md"
+                  - "Messages sent from phone": "api/receiving/notifications-format/outgoing-message/phone.md"
+                  - "Outgoing message status": "api/receiving/notifications-format/outgoing-message/status.md"
+      - "Service methods":
+          - "Service methods - overview": "api/service/index.md"
+          - "Check Whatsapp availability": "api/service/check-whatsapp.md"
+      - "Rate limiter": "api/rate-limiter.md"
+  - "Partners":
+      - "Partners - overview": "partners/index.md"
+      - "Create instance": "partners/instance-creation.md"
+      - "Delete instance partner account": "partners/instance-removed.md"
+      - "Get all instances of an account created by partner": "partners/instance-reveiver.md"
     
 theme:
   name: material
@@ -59,21 +57,11 @@ theme:
   favicon: assets/logo.png
   logo: assets/flow (1).png
 
-extra:
-  alternate:
-    - name: English
-      link: /en/
-      lang: en
-    - name: Russian
-      link: /ru/
-      lang: ru
-
 # Plugins
 plugins:
   - search:
       lang:
         - en
-        - ru
   - minify:
       minify_html: true
 
