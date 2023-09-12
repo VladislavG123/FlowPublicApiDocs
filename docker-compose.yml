@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  mkdocs:
+    container_name: mkdocs
+    image: polinux/mkdocs:1.1.2
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      LIVE_RELOAD_SUPPORT: 'true'
+      ADD_MODULES: 'mkdocs-material mkdocs-material-extensions mkdocs-minify-plugin'
+      FAST_MODE: 'true'
+      DOCS_DIRECTORY: '/'
+      GIT_REPO: 'git@github.com:VladislavG123/FlowPublicApiDocs.git'
+      UPDATE_INTERVAL: 15
+      AUTO_UPDATE: 'true'
+    volumes:
+      - $HOME/.ssh/id_rsa:/root/.ssh/id_rsa

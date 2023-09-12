@@ -14,6 +14,5 @@ This section of the API is for receiving messages and notifications sent on What
 Please refer to the corresponding pages for detailed information about each endpoint.
 ## Restrictions
 
-Please pay attention to [rate limiter](api/rate-limiter.md) when using this API.
+Please pay attention to [rate limiter](../rate-limiter.md) when using this API.
 
-If you have any questions or problems, please refer to the [support section](support.md).
