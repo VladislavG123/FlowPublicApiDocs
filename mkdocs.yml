@@ -1,0 +1,110 @@
+site_name: Flow API
+  
+nav:
+  - "Оглавление": "index.md"
+  - "Документация API":
+      - "Обзор": "api/index.md"
+      - "Аккаунт": 
+          - "Обзор": "api/account/index.md"
+          - "Получить настройки аккаунта (инстанса)": "api/account/get-settings.md"
+          - "Установить настройки аккаунта (инстанса)": "api/account/set-settings.md"
+          - "Перезапустить аккаунт (инстанс)": "api/account/reboot.md"
+          - "Получить QR-код": "api/account/qr.md"
+      - "Отправка":
+          - "Обзор": "api/sending/index.md"
+          - "Отправить текст": "api/sending/text.md"
+          - "Отправить изображение": "api/sending/image.md"
+      - "Получение":
+          - "Обзор": "api/receiving/index.md"
+          - "Формат входящих уведомлений":
+              - "Обзор": "api/receiving/notifications-format/index.md"
+              - "Входящее сообщение":
+                  - "Обзор": "api/receiving/notifications-format/incoming-message/index.md"
+                  - "Текст": "api/receiving/notifications-format/incoming-message/text.md"
+                  - "Текст или текст с URL": "api/receiving/notifications-format/incoming-message/extended-text.md"
+                  - "Видео, аудио, изображение, документ": "api/receiving/notifications-format/incoming-message/image.md"
+                  - "Реакция": "api/receiving/notifications-format/incoming-message/reaction.md"
+              - "Отправленное сообщение":
+                  - "Обзор": "api/receiving/notifications-format/outgoing-message/index.md"
+                  - "Отправленное с телефона сообщение": "api/receiving/notifications-format/outgoing-message/phone.md"
+                  - "Отправленное сообщение через API": "api/receiving/notifications-format/outgoing-message/api.md"
+                  - "Статус отправленного сообщения": "api/receiving/notifications-format/outgoing-message/status.md"
+      - "Сервисные методы":
+          - "Обзор": "api/service/index.md"
+          - "Проверить наличие Whatsapp": "api/service/check-whatsapp.md"
+      - "Ограничение частоты запросов": "api/rate-limiter.md"
+  - "Партнерам":
+      - "Обзор": "partners/index.md"
+      - "Создание инстанса": "partners/instance-creation.md"
+      - "Удаление инстанса аккаунта партнера": "partners/instance-remover.md"
+      - "Получение всех инстансов аккаунта созданных партнером": "partners/instance-receiver.md"
+    
+theme:
+  name: material
+  # Don't include MkDocs' JavaScript
+  include_search_page: true
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  lang: ru
+  features:
+    - navigation.instant
+  palette:
+    scheme: default
+    primary: #1a115f
+    accent: #1a115f
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/logo.png
+  logo: assets/flow (1).png
+
+extra:
+  alternate:
+    - name: English
+      link: /en/
+      lang: en
+    - name: Russian
+      link: /ru/
+      lang: ru
+
+# Plugins
+plugins:
+  - search:
+      lang:
+        - en
+        - ru
+  - minify:
+      minify_html: true
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.toc:
+      permalink: "#"
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+        # - pymdownx.highlight:
+      #     linenums_style: pymdownx-inline
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
